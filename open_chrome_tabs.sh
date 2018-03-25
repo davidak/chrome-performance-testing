@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# this script opens 1000 tabs (10 tabs per window)
+# this script opens 1000 tabs (50 tabs per window)
 # runs with Chrome on macOS or NixOS (Linux)
 
 function open_url {
@@ -50,7 +50,7 @@ for i in $(seq 0 999); do
   fi
 
   echo -e "\n# open URL Nr. $i (${domains[i]})"
-  if (( $i % 10 == 0 )); then # every 10th
+  if (( $i % 50 == 0 )); then # every 50th
     open_url_in_new_window "${domains[i]}"
   else
     open_url "${domains[i]}"
